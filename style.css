@@ -1,0 +1,325 @@
+/* RESET & VARIÁVEIS DE CORES */
+:root {
+    --bg-dark: #0d1b2a;
+    --bg-card: #1b263b;
+    --accent-gold: #c5a880;
+    --accent-gold-hover: #b09168;
+    --text-light: #f4f4f9;
+    --text-muted: #a0aab2;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(13, 27, 42, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--accent-gold);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+/* HERO SECTION - A IMAGEM DE FUNDO ENTRA AQUI */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    
+    /* Gradiente escuro à esquerda que vai ficando transparente à direita + imagem de fundo */
+    background: linear-gradient(
+        to right, 
+        rgba(13, 27, 42, 0.95) 0%, 
+        rgba(13, 27, 42, 0.70) 45%, 
+        rgba(13, 27, 42, 0.10) 100%
+    ), url('fundo-hero.jpg');
+    
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+/* BOTÕES */
+.btn {
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--accent-gold);
+    color: #0d1b2a;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-gold-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(197, 168, 128, 0.1);
+}
+
+/* SEÇÕES GENÉRICAS */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--accent-gold);
+}
+
+/* SOBRE */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* CONFIGURAÇÃO DA FOTO DA ADVOGADA */
+.advogada-foto {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid rgba(197, 168, 128, 0.5);
+}
+
+.oab-tag {
+    display: inline-block;
+    background: rgba(197, 168, 128, 0.15);
+    color: var(--accent-gold);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.sobre-texto h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+/* FUNDO ÁREAS DE ATUAÇÃO COM IMAGEM E PARALLAX */
+#atuacao {
+    position: relative;
+    background: linear-gradient(
+        rgba(13, 27, 42, 0.85), 
+        rgba(13, 27, 42, 0.90)
+    ), url('biblioteca.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Faz a imagem ficar estática enquanto rola a página */
+}
+
+/* CARDS ÁREAS DE ATUAÇÃO */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    /* Deixei o fundo do card levemente transparente para misturar com a biblioteca */
+    background-color: rgba(27, 38, 59, 0.85); 
+    padding: 30px;
+    border-radius: 6px;
+    border-top: 3px solid var(--accent-gold);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px); /* Desfoca suavemente o que fica atrás do card */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* CTA BOX */
+.cta-box {
+    text-align: center;
+    background: linear-gradient(135deg, #1b263b 0%, #0d1b2a 100%);
+    padding: 50px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(197, 168, 128, 0.3);
+}
+
+.cta-box h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.cta-box p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+/* CONFIGURAÇÃO DO MAPA LARGO */
+.mapa-container {
+    width: 100%;
+    height: 300px;
+    line-height: 0;
+    display: block;
+}
+
+.mapa-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* RESPONSIVIDADE (MOBILE) */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+
+    .advogada-foto {
+        height: 380px; 
+    }
+    
+    .hero {
+        background: linear-gradient(
+            rgba(13, 27, 42, 0.85), 
+            rgba(13, 27, 42, 0.85)
+        ), url('fundo-hero.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Desliga o parallax no telemóvel para melhorar a performance */
+    #atuacao {
+        background-attachment: scroll; 
+    }
+}
