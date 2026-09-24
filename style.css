@@ -37,7 +37,7 @@ body {
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(197, 168, 128, 0.2);
-    padding: 15px 0;
+    padding: 12px 0;
 }
 
 .nav-container {
@@ -46,16 +46,57 @@ body {
     align-items: center;
 }
 
+/* LOGO E TÍTULO ESTILIZADO */
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    color: var(--text-light);
     text-decoration: none;
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
-.logo span {
+.logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-nome {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.logo-subtitulo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.linha-decorativa {
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background-color: var(--accent-gold);
+}
+
+.logo-cargo {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 500;
     color: var(--accent-gold);
+    letter-spacing: 5px; /* Espaçamento entre as letras para o efeito A D V O G A D A */
+    line-height: 1;
 }
 
 .nav-links {
@@ -74,7 +115,7 @@ body {
     color: var(--accent-gold);
 }
 
-/* HERO SECTION - IMAGEM DE FUNDO CORRIGIDA COM CAMINHO img/ */
+/* HERO SECTION */
 .hero {
     height: 90vh;
     display: flex;
@@ -169,7 +210,7 @@ body {
     align-items: center;
 }
 
-/* CONFIGURAÇÃO DA FOTO DA ADVOGADA */
+/* FOTO DA ADVOGADA */
 .advogada-foto {
     width: 100%;
     height: 500px;
@@ -202,7 +243,7 @@ body {
     color: var(--text-muted);
 }
 
-/* FUNDO ÁREAS DE ATUAÇÃO COM CAMINHO img/ E PARALLAX */
+/* FUNDO ÁREAS DE ATUAÇÃO COM PARALLAX */
 #atuacao {
     position: relative;
     background: linear-gradient(
@@ -266,7 +307,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* CONFIGURAÇÃO DO MAPA */
+/* MAPA */
 .mapa-container {
     width: 100%;
     height: 350px;
