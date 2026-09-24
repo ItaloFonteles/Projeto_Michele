@@ -74,20 +74,19 @@ body {
     color: var(--accent-gold);
 }
 
-/* HERO SECTION - A IMAGEM DE FUNDO ENTRA AQUI */
+/* HERO SECTION - IMAGEM DE FUNDO CORRIGIDA COM CAMINHO img/ */
 .hero {
     height: 90vh;
     display: flex;
     align-items: center;
     padding-top: 80px;
     
-    /* Gradiente escuro à esquerda que vai ficando transparente à direita + imagem de fundo */
     background: linear-gradient(
         to right, 
         rgba(13, 27, 42, 0.95) 0%, 
         rgba(13, 27, 42, 0.70) 45%, 
         rgba(13, 27, 42, 0.10) 100%
-    ), url('fundo-hero.jpg');
+    ), url('img/fundo-hero.jpg');
     
     background-size: cover;
     background-position: right center;
@@ -203,16 +202,16 @@ body {
     color: var(--text-muted);
 }
 
-/* FUNDO ÁREAS DE ATUAÇÃO COM IMAGEM E PARALLAX */
+/* FUNDO ÁREAS DE ATUAÇÃO COM CAMINHO img/ E PARALLAX */
 #atuacao {
     position: relative;
     background: linear-gradient(
         rgba(13, 27, 42, 0.85), 
         rgba(13, 27, 42, 0.90)
-    ), url('biblioteca.jpg');
+    ), url('img/biblioteca.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Faz a imagem ficar estática enquanto rola a página */
+    background-attachment: fixed;
 }
 
 /* CARDS ÁREAS DE ATUAÇÃO */
@@ -223,13 +222,12 @@ body {
 }
 
 .card {
-    /* Deixei o fundo do card levemente transparente para misturar com a biblioteca */
     background-color: rgba(27, 38, 59, 0.85); 
     padding: 30px;
     border-radius: 6px;
     border-top: 3px solid var(--accent-gold);
     transition: transform 0.3s ease;
-    backdrop-filter: blur(5px); /* Desfoca suavemente o que fica atrás do card */
+    backdrop-filter: blur(5px);
 }
 
 .card:hover {
@@ -268,10 +266,10 @@ body {
     margin-bottom: 25px;
 }
 
-/* CONFIGURAÇÃO DO MAPA LARGO */
+/* CONFIGURAÇÃO DO MAPA */
 .mapa-container {
     width: 100%;
-    height: 300px;
+    height: 350px;
     line-height: 0;
     display: block;
 }
@@ -313,12 +311,11 @@ footer {
         background: linear-gradient(
             rgba(13, 27, 42, 0.85), 
             rgba(13, 27, 42, 0.85)
-        ), url('fundo-hero.jpg');
+        ), url('img/fundo-hero.jpg');
         background-size: cover;
         background-position: center;
     }
     
-    /* Desliga o parallax no telemóvel para melhorar a performance */
     #atuacao {
         background-attachment: scroll; 
     }

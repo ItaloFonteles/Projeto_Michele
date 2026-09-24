@@ -20,7 +20,7 @@ Uma página web profissional, moderna e responsiva desenvolvida para apresentar 
 
 Este projeto encontra-se hospedado diretamente através do GitHub Pages. Pode aceder ao site em funcionamento através do link abaixo:
 
-> **[Substitua este texto pelo link do seu GitHub Pages, ex: https://seu-usuario.github.io/Projeto_Michele]**
+> **[https://italofonteles.github.io/Projeto_Michele/]**
 
 ---
 👨‍💻 *Projeto desenvolvido para otimização de captação de clientes e presença digital.*

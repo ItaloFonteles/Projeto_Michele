@@ -26,13 +26,12 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (Apresentação Principal) -->
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container hero-content">
             <h1>Defesa estratégica e garantia dos seus direitos</h1>
             <p>Atendimento jurídico especializado e humanizado nas áreas Previdenciária, Trabalhista e Penal.</p>
             <div class="hero-buttons">
-                <!-- Link do WhatsApp atualizado com mensagem automática -->
                 <a href="https://wa.me/5595991210096?text=Ol%C3%A1%2C%20Dra.%20Michele.%20Acessei%20o%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn btn-primary">Fale pelo WhatsApp</a>
                 <a href="#atuacao" class="btn btn-secondary">Áreas de Atuação</a>
             </div>
@@ -43,8 +42,7 @@
     <section id="sobre" class="section">
         <div class="container grid-2">
             <div class="sobre-img">
-                <!-- A FOTO FOI ADICIONADA AQUI -->
-                <img src="foto-michele.jpg" alt="Foto profissional da Dra. Michele Fonteles" class="advogada-foto">
+                <img src="img/foto-michele.jpg" alt="Foto profissional da Dra. Michele Fonteles" class="advogada-foto">
             </div>
             <div class="sobre-texto">
                 <h2>Sobre a Advogada</h2>
@@ -56,24 +54,21 @@
     </section>
 
     <!-- ÁREAS DE ATUAÇÃO -->
-    <section id="atuacao" class="section bg-alt">
+    <section id="atuacao" class="section">
         <div class="container">
             <h2 class="section-title">Áreas de Atuação</h2>
             <div class="cards-grid">
                 
-                <!-- Direito Previdenciário -->
                 <div class="card">
                     <h3>Direito Previdenciário</h3>
                     <p>Atuação em aposentadorias, benefícios do INSS, BPC/LOAS, pensão por morte e demais questões previdenciárias para garantir a sua segurança financeira.</p>
                 </div>
 
-                <!-- Direito do Trabalho -->
                 <div class="card">
                     <h3>Direito do Trabalho</h3>
                     <p>Defesa dos direitos do trabalhador, atuando com verbas trabalhistas, rescisões, reconhecimento de vínculo empregatício e reclamações trabalhistas.</p>
                 </div>
 
-                <!-- Direito Penal -->
                 <div class="card">
                     <h3>Direito Penal</h3>
                     <p>Defesa técnica e acompanhamento especializado em processos e procedimentos criminais, garantindo o respeito aos direitos fundamentais.</p>
@@ -88,14 +83,13 @@
         <div class="container cta-box">
             <h2>Precisa de orientação jurídica?</h2>
             <p>Agende uma consulta para analisarmos o seu caso com total sigilo e dedicação.</p>
-            <!-- Link do WhatsApp atualizado com mensagem automática -->
             <a href="https://wa.me/5595991210096?text=Ol%C3%A1%2C%20Dra.%20Michele.%20Acessei%20o%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn btn-primary">Iniciar Atendimento no WhatsApp</a>
         </div>
     </section>
 
     <!-- MAPA DE LOCALIZAÇÃO -->
     <section class="mapa-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.8879148637625!2d-60.74759410763575!3d2.848702666826872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d930ff35270d12d%3A0x4d9758476f5d0eb4!2sR.%20Cisne%2C%20338%20-%20Cidade%20Sat%C3%A9lite%2C%20Boa%20Vista%20-%20RR%2C%2069317-496!5e0!3m2!1spt-BR!2sbr!4v1790181359781!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.8879148637625!2d-60.74759410763575!3d2.848702666826872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d930ff35270d12d%3A0x4d9758476f5d0eb4!2sR.%20Cisne%2C%20338%20-%20Cidade%20Sat%C3%A9lite%2C%20Boa%20Vista%20-%20RR%2C%2069317-496!5e0!3m2!1spt-BR!2sbr!4v1790181359781!5m2!1spt-BR!2sbr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </section>
 
     <!-- RODAPÉ -->
@@ -106,14 +100,15 @@
         </div>
     </footer>
 
-    <!-- Script opcional para rolagem suave ao clicar nos links do menu -->
+    <!-- Script para rolagem suave -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
