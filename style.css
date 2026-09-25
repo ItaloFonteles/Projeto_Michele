@@ -95,7 +95,7 @@ body {
     font-size: 0.65rem;
     font-weight: 500;
     color: var(--accent-gold);
-    letter-spacing: 5px; /* Espaçamento entre as letras para o efeito A D V O G A D A */
+    letter-spacing: 5px;
     line-height: 1;
 }
 
@@ -287,24 +287,74 @@ body {
     font-size: 0.95rem;
 }
 
-/* CTA BOX */
+/* CTA BOX CENTRALIZADO */
 .cta-box {
     text-align: center;
-    background: linear-gradient(135deg, #1b263b 0%, #0d1b2a 100%);
-    padding: 50px 20px;
+    background-color: #0c1825;
+    padding: 60px 40px;
     border-radius: 8px;
-    border: 1px solid rgba(197, 168, 128, 0.3);
+    border: 1px solid rgba(197, 168, 128, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .cta-box h2 {
     font-family: var(--font-heading);
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-weight: 600;
 }
 
-.cta-box p {
+.cta-desc {
     color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ALINHAMENTO CENTRAL DAS INFORMAÇÕES DE CONTATO */
+.cta-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.info-item {
     margin-bottom: 25px;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.info-val {
+    font-size: 1.05rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.btn-cta {
+    background-color: var(--accent-gold);
+    color: #1a1a1a;
+    padding: 14px 36px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(197, 168, 128, 0.2);
+}
+
+.btn-cta:hover {
+    background-color: var(--accent-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(197, 168, 128, 0.3);
 }
 
 /* MAPA */
@@ -346,6 +396,14 @@ footer {
 
     .advogada-foto {
         height: 380px; 
+    }
+
+    .cta-box {
+        padding: 40px 20px;
+    }
+
+    .cta-box h2 {
+        font-size: 2.1rem;
     }
     
     .hero {
